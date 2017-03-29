@@ -51,11 +51,11 @@
 
 
 
-	<test name="web" enabled="true" thread-count="10">
+	<test name="win7" enabled="true" thread-count="10">
 		<parameter name="driver.capabilities.platformName" value="Windows"></parameter>
-		<parameter name="driver.capabilities.platformVersion" value="8.1"></parameter>
-		<parameter name="driver.capabilities.browserName" value="Chrome"></parameter>
-		<parameter name="driver.capabilities.browserVersion" value="55"></parameter>
+		<parameter name="driver.capabilities.platformVersion" value="7"></parameter>
+		<parameter name="driver.capabilities.browserName" value="Firefox"></parameter>
+		<parameter name="driver.capabilities.browserVersion" value="47"></parameter>
 
 
 		<groups>
@@ -69,10 +69,10 @@
 		</classes>
 	</test>
 
-	<test name="web1" enabled="true" thread-count="10">
+	<test name="win8.1" enabled="true" thread-count="10">
 		<parameter name="driver.capabilities.platformName" value="Windows"></parameter>
 		<parameter name="driver.capabilities.platformVersion" value="8.1"></parameter>
-		<parameter name="driver.capabilities.browserVersion" value="54"></parameter>
+		<parameter name="driver.capabilities.browserVersion" value="latest"></parameter>
 		<parameter name="driver.capabilities.browserName" value="Chrome"></parameter>
 
 		<groups>
