@@ -12,7 +12,7 @@
         <testngXmlDir>src/main/resources/config</testngXmlDir>
         <testngXmlFile>demo.xml</testngXmlFile>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <qaf.version>2.1.8</qaf.version>
+        <qaf.version>2.1.13</qaf.version>
         <reportium-sdk.version>1.0.0</reportium-sdk.version>
         <perfectomobile.version>9.0.0.0</perfectomobile.version>
         <selenium.version>2.53.1</selenium.version>
@@ -145,5 +145,12 @@
             <artifactId>eyes-selenium-java-jersey1x</artifactId>
             <version>RELEASE</version>
         </dependency>
+<!--
+        <dependency>
+            <groupId>com.applitools</groupId>
+            <artifactId>eyes-selenium-java3</artifactId>
+            <version>3.13</version>
+        </dependency>
+        -->
     </dependencies>
 </project>
