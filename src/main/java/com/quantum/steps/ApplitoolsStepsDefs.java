@@ -3,6 +3,7 @@
  */
 package com.quantum.steps;
 
+
 import com.applitools.eyes.Eyes;
 import com.qmetry.qaf.automation.core.ConfigurationManager;
 import com.qmetry.qaf.automation.step.QAFTestStepProvider;
@@ -10,7 +11,6 @@ import com.qmetry.qaf.automation.ui.WebDriverTestBase;
 import com.quantum.utils.AppiumUtils;
 import com.quantum.utils.ConfigurationUtils;
 import cucumber.api.java.en.Then;
-import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -20,7 +20,15 @@ import org.openqa.selenium.WebDriver;
 @QAFTestStepProvider
 public class ApplitoolsStepsDefs {
 	@Then("I check window \"(.*?)\"")
-	public void checkWindow(String tag) {
+	public void checkWindow(String tag) {applitoolsCheckWindow(tag, false);}
+
+
+	@Then("I check complete window \"(.*?)\"")
+	public void checkCompleteWindow(String tag) {applitoolsCheckWindow(tag, true);}
+
+
+
+	public void applitoolsCheckWindow(String tag, boolean fullPageScreenshot) {
 		Object o = ConfigurationManager.getBundle().getObject("Eyes");
 		if (null != o) {
 			Eyes e = (Eyes) o;
@@ -38,6 +46,8 @@ public class ApplitoolsStepsDefs {
 			}
 
 			try {
+				if (fullPageScreenshot)
+					e.setForceFullPageScreenshot(true);
 				e.checkWindow(tag);
 			} catch (Exception ex){
 				System.out.println(ex.getMessage());
